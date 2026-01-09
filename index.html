@@ -107,6 +107,12 @@
       height: 18px;
       display: block;
       filter: brightness(0) invert(1);
+      transform-origin: center;
+    }
+
+    /* Make non-Kick icons visually match Kick */
+    .icon--big {
+      transform: scale(1.25);
     }
 
     .youtube {
@@ -137,6 +143,7 @@
   </style>
 </head>
 <body>
+
   <!-- Background video -->
   <video class="bg-video" autoplay muted loop playsinline preload="auto">
     <source src="bg.mp4" type="video/mp4" />
@@ -152,17 +159,17 @@
       <h1>TAMIMO</h1>
 
       <a class="button youtube" href="https://youtube.com" target="_blank" rel="noopener">
-        <img src="youtube.svg" class="icon" alt="">
+        <img src="youtube.svg" class="icon icon--big" alt="">
         YouTube
       </a>
 
       <a class="button instagram" href="https://instagram.com" target="_blank" rel="noopener">
-        <img src="instagram.svg" class="icon" alt="">
+        <img src="instagram.svg" class="icon icon--big" alt="">
         Instagram
       </a>
 
       <a class="button discord" href="https://discord.com" target="_blank" rel="noopener">
-        <img src="discord.svg" class="icon" alt="">
+        <img src="discord.svg" class="icon icon--big" alt="">
         Join Discord
       </a>
 
@@ -172,5 +179,6 @@
       </a>
     </div>
   </div>
+
 </body>
 </html>
