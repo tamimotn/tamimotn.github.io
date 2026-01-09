@@ -5,6 +5,12 @@
   <title>TAMIMO</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Social icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
   <style>
     * {
       box-sizing: border-box;
@@ -26,18 +32,21 @@
       height: 100%;
       object-fit: cover;
       z-index: -2;
-      filter: saturate(1.05) contrast(1.05);
     }
 
-    /* Dark overlay to keep text readable */
+    /* Dark overlay */
     .overlay {
       position: fixed;
       inset: 0;
-      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.65), rgba(2, 6, 23, 0.85));
+      background: radial-gradient(
+        circle at top,
+        rgba(15, 23, 42, 0.65),
+        rgba(2, 6, 23, 0.9)
+      );
       z-index: -1;
     }
 
-    /* Center content */
+    /* Center wrapper */
     .wrap {
       min-height: 100vh;
       display: flex;
@@ -79,7 +88,10 @@
     }
 
     a.button {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
       width: 100%;
       padding: 15px;
       margin-bottom: 14px;
@@ -95,19 +107,35 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
     }
 
-    .youtube { background: linear-gradient(135deg, #ff0000, #cc0000); }
-    .instagram { background: linear-gradient(135deg, #c13584, #833ab4); }
-    .discord { background: linear-gradient(135deg, #7289da, #5865f2); }
-    .kick { background: linear-gradient(135deg, #00c805, #00a63d); }
+    .youtube {
+      background: linear-gradient(135deg, #ff0000, #cc0000);
+    }
 
-    /* Accessibility: respect reduced motion */
+    .instagram {
+      background: linear-gradient(135deg, #c13584, #833ab4);
+    }
+
+    .discord {
+      background: linear-gradient(135deg, #7289da, #5865f2);
+    }
+
+    .kick {
+      background: linear-gradient(135deg, #00c805, #00a63d);
+    }
+
+    /* Reduced motion fallback */
     @media (prefers-reduced-motion: reduce) {
-      .bg-video { display: none; }
-      body { background: radial-gradient(circle at top, #0f172a, #020617); }
+      .bg-video {
+        display: none;
+      }
+      body {
+        background: radial-gradient(circle at top, #0f172a, #020617);
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Background video -->
   <video class="bg-video" autoplay muted loop playsinline preload="auto">
     <source src="bg.mp4" type="video/mp4" />
   </video>
@@ -121,10 +149,25 @@
 
       <h1>TAMIMO</h1>
 
-      <a class="button youtube" href="https://www.youtube.com/@TamimoTN" target="_blank" rel="noopener">YouTube</a>
-      <a class="button instagram" href="https://www.instagram.com/tamimotn/" target="_blank" rel="noopener">Instagram</a>
-      <a class="button discord" href="https://discord.com/invite/MTh6TM97wH" target="_blank" rel="noopener">Join Discord</a>
-      <a class="button kick" href="https://kick.com/TamimoTN" target="_blank" rel="noopener">Kick</a>
+      <a class="button youtube" href="https://www.youtube.com/@TamimoTN" target="_blank" rel="noopener">
+        <i class="fa-brands fa-youtube"></i>
+        YouTube
+      </a>
+
+      <a class="button instagram" href="https://www.instagram.com/tamimotn/" target="_blank" rel="noopener">
+        <i class="fa-brands fa-instagram"></i>
+        Instagram
+      </a>
+
+      <a class="button discord" href="https://discord.com/invite/MTh6TM97wH" target="_blank" rel="noopener">
+        <i class="fa-brands fa-discord"></i>
+        Join Discord
+      </a>
+
+      <a class="button kick" href="https://kick.com/TamimoTN" target="_blank" rel="noopener">
+        <i class="fa-solid fa-bolt"></i>
+        Kick
+      </a>
     </div>
   </div>
 </body>
