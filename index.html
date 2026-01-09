@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TAMIMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #0e141b, #05070a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+
+    a.button {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 14px;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .youtube { background: #ff0000; }
+    .instagram { background: #c13584; }
+    .discord { background: #7289da; }
+    .kick { background: #00c805; }
+
+    a.button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TAMIMO</h1>
+
+    <a class="button youtube" href="https://youtube.com" target="_blank">YouTube</a>
+    <a class="button instagram" href="https://instagram.com" target="_blank">Instagram</a>
+    <a class="button discord" href="https://discord.com" target="_blank">Join Discord</a>
+    <a class="button kick" href="https://kick.com" target="_blank">Kick</a>
+  </div>
+</body>
+</html>
